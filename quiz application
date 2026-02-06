@@ -1,0 +1,33 @@
+q1='''Is python case sensitive when dealing with identifier?
+a.yes
+b.no
+c.Machine Independent
+d.None'''
+q2='''Which of the following is not a keyword?
+a.eval
+b.assert
+c.local
+d.pass'''
+q3='''which one of these is a floor division operator?
+a./
+b.//
+c.%
+d.None'''
+questions={q1:"a",q2:"a",q3:"b"}
+name=input("Enter your name:")
+print("Hello",name,"Welcome to quiz")
+score=0
+for i,j in questions.items():
+	print(i)
+	option=input("Do you want to skip this question(yes/no):")
+	if option=="yes":
+		continue
+	ans=input("Enter your answer(a/b/c/d):")
+	if ans==questions[i]:
+		print("Correct answer you got 1 point")
+		score=score+1
+		print("Current score:",score)
+	else:
+		print("Wrong answer you lost 1 point")
+		print("Current score:",score)
+print("Final score:", score)
